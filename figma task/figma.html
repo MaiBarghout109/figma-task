@@ -1,0 +1,373 @@
+<!-- 17/7/2023
+   responsive ضايل ال
+   +
+     بيصير مشكلة في اول سيكشن اسألي البشمهندس عنها scroll  في مشكلة لما اعمل 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma</title>
+  <link rel="stylesheet" type="text/css" href="./font/stylesheet.css"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+    <header>
+      <div>
+        <img src="img/Logo.png" class="logo" >
+      </div>
+
+      <nav class="navigation">
+        <a href="#"> About
+          <!--  <ul>
+            <li><a href="#"> Contact Us  </a></li>
+            <li><a href="#"> Pricing  </a></li>
+            <li><a href="#"> Login  </a></li>
+          </ul>
+          -->
+        </a>
+        <a href="#"> Pricing  </a>
+        <a href="#"> Contact Us </a>
+        <a href="#"> Login </a>
+        <button type="button" class="nav-btn"> Start free trial </button>
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars" style="color: #722ed1;"></i>
+        </div>
+      </nav>
+
+       
+        <!-- for menu in navbar when responsive-->
+      <div class="dropdown-menu ">
+       <li><a href="#"> About  </a> </li> 
+        <li><a href="#"> Pricing  </a></li>
+        <li><a href="#"> Contact Us </a></li>
+        <li><a href="#"> Login  </a></li>
+       <li><button type="button" class="nav-btn"> Start free trial </button></li> 
+      </div>
+     
+    </header>
+
+    <!-- Sticky navbar-->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0); 
+        })
+      </script>
+    
+
+    
+      <!-- for main section -->
+    <section class="main">
+      <div class="white-shape"></div>
+      <div class="main-content">
+        <div class="txt-main-ra">
+          <div class="text-main">
+            <svg class="star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6C12.8011 6 12.6103 5.92098 12.4697 5.78033C12.329 5.63968 12.25 5.44891 12.25 5.25C12.25 4.85218 12.092 4.47064 11.8107 4.18934C11.5294 3.90804 11.1478 3.75 10.75 3.75C10.5511 3.75 10.3603 3.67098 10.2197 3.53033C10.079 3.38968 10 3.19891 10 3C10 2.80109 10.079 2.61032 10.2197 2.46967C10.3603 2.32902 10.5511 2.25 10.75 2.25C11.1478 2.25 11.5294 2.09196 11.8107 1.81066C12.092 1.52936 12.25 1.14782 12.25 0.75C12.25 0.551088 12.329 0.360322 12.4697 0.21967C12.6103 0.0790176 12.8011 0 13 0C13.1989 0 13.3897 0.0790176 13.5303 0.21967C13.671 0.360322 13.75 0.551088 13.75 0.75C13.75 1.14782 13.908 1.52936 14.1893 1.81066C14.4706 2.09196 14.8522 2.25 15.25 2.25C15.4489 2.25 15.6397 2.32902 15.7803 2.46967C15.921 2.61032 16 2.80109 16 3C16 3.19891 15.921 3.38968 15.7803 3.53033C15.6397 3.67098 15.4489 3.75 15.25 3.75C14.8522 3.75 14.4706 3.90804 14.1893 4.18934C13.908 4.47064 13.75 4.85218 13.75 5.25C13.75 5.44891 13.671 5.63968 13.5303 5.78033C13.3897 5.92098 13.1989 6 13 6Z" fill="#722ED1"/>
+              <path d="M6 16C5.73478 16 5.48043 15.8946 5.29289 15.7071C5.10536 15.5196 5 15.2652 5 15C5 13.9391 4.57857 12.9217 3.82843 12.1716C3.07828 11.4214 2.06087 11 1 11C0.734784 11 0.48043 10.8946 0.292893 10.7071C0.105357 10.5196 0 10.2652 0 10C0 9.73478 0.105357 9.48043 0.292893 9.29289C0.48043 9.10536 0.734784 9 1 9C2.06087 9 3.07828 8.57857 3.82843 7.82843C4.57857 7.07828 5 6.06087 5 5C5 4.73478 5.10536 4.48043 5.29289 4.29289C5.48043 4.10536 5.73478 4 6 4C6.26522 4 6.51957 4.10536 6.70711 4.29289C6.89464 4.48043 7 4.73478 7 5C7 6.06087 7.42143 7.07828 8.17157 7.82843C8.92172 8.57857 9.93913 9 11 9C11.2652 9 11.5196 9.10536 11.7071 9.29289C11.8946 9.48043 12 9.73478 12 10C12 10.2652 11.8946 10.5196 11.7071 10.7071C11.5196 10.8946 11.2652 11 11 11C9.93913 11 8.92172 11.4214 8.17157 12.1716C7.42143 12.9217 7 13.9391 7 15C7 15.2652 6.89464 15.5196 6.70711 15.7071C6.51957 15.8946 6.26522 16 6 16Z" fill="#722ED1"/>
+              </svg>
+                   
+          <h6> v3.1 released. <a href="#" class="more">Learn More</a></h6>
+          </div>
+        </div>
+        
+      
+        <h1> Your data with <br> real-time analytics </h1>
+        <br>
+         <p> Harness the potential of Big Data Analytics & Cliud Services <br>
+          and become a data-driven organization with Needle tail  
+          </p>
+        <br>
+          <a href="#" class="main-btn" > Start free trial</a>
+          <a href="#" class="learn-btn" > Learn More</a>
+        </div>
+          <div>
+          <img src="img/image 1.png" class="main-img"> 
+
+          </div>
+      
+    </section>
+
+
+    <!-- for Qubly section-->
+
+    <section class="Qubly">
+      <div class="txt-Qu-ra">
+        <div class="text-Qubly">
+          <svg class="eye" width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.232 8.34696C25.0487 5.97793 23.2331 3.98243 20.986 2.58128C18.739 1.18013 16.1481 0.427949 13.5 0.407959C10.852 0.428174 8.26124 1.18045 6.01421 2.58158C3.76719 3.9827 1.95151 5.97807 0.768028 8.34696C0.665726 8.54943 0.612427 8.77311 0.612427 8.99996C0.612427 9.22681 0.665726 9.45049 0.768028 9.65296C1.95133 12.022 3.76696 14.0175 6.01403 15.4186C8.26109 16.8198 10.852 17.572 13.5 17.592C16.148 17.5717 18.7388 16.8195 20.9858 15.4183C23.2329 14.0172 25.0485 12.0218 26.232 9.65296C26.3343 9.45049 26.3876 9.22681 26.3876 8.99996C26.3876 8.77311 26.3343 8.54943 26.232 8.34696ZM13.5 15.447C12.2255 15.447 10.9796 15.069 9.91993 14.3609C8.86022 13.6529 8.03428 12.6465 7.54655 11.469C7.05882 10.2915 6.9312 8.99581 7.17985 7.7458C7.42849 6.49578 8.04222 5.34757 8.94343 4.44636C9.84464 3.54515 10.9929 2.93142 12.2429 2.68278C13.4929 2.43414 14.7886 2.56175 15.966 3.04948C17.1435 3.53721 18.1499 4.36315 18.858 5.42286C19.5661 6.48257 19.944 7.72846 19.944 9.00296C19.9432 10.7115 19.264 12.3498 18.0556 13.5576C16.8472 14.7655 15.2086 15.444 13.5 15.444V15.447ZM13.5 4.70696C13.1164 4.71241 12.7353 4.76959 12.367 4.87696C12.6714 5.28934 12.8177 5.79722 12.7794 6.30831C12.7411 6.8194 12.5207 7.29979 12.1583 7.66219C11.7959 8.0246 11.3155 8.24498 10.8044 8.28329C10.2933 8.3216 9.78541 8.17529 9.37303 7.87096C9.13812 8.73617 9.18045 9.65326 9.49405 10.4932C9.80765 11.3331 10.3767 12.0535 11.1212 12.553C11.8657 13.0525 12.7481 13.306 13.6441 13.2778C14.5402 13.2496 15.4049 12.9411 16.1165 12.3958C16.8281 11.8504 17.3507 11.0956 17.6109 10.2377C17.871 9.3797 17.8556 8.46176 17.5667 7.61304C17.2779 6.76431 16.7302 6.02753 16.0006 5.5064C15.2711 4.98527 14.3966 4.70602 13.5 4.70796V4.70696Z" fill="#722ED1"/>
+            </svg>
+            
+          <h6 class="Qu"> Why Qubly </h6> <br>
+        </div>
+      </div>
+     
+      
+      <div class="content">
+        <h2 class="Big-Data"> Get actianable insights from Big Data in 3 steps</h2><br>
+        <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad nobis qui nesciunt,<br>
+           officia veritatis quidem sapiente? Blanditiis ducimus nemo quas at ullam sit 
+           </p>
+           <br> 
+
+    <div class="features">
+    <div>
+      <img src="img/chart-bar-33.png" >
+      <h5>Valuable business insights</h5>
+      <p>
+        Collect processed & cleansed data that is ready to be analyzed to
+        gather valuable business insights.
+      </p>
+    </div>
+    <div>
+      <img src="img/newsletter-dev.png">
+      <h5>Powerful Algorithms</h5>
+      <p>
+        With the help of powerful algorithms, quality rules & techniques,
+        obtain simplified & enriched data.
+      </p>
+    </div>
+    <div>
+      <img src="img/timeline.png" />
+      <h5>Data in real-time</h5>
+      <p>
+        Collect data in real-time from multiple channels and move it into
+        a data lake, in its original format.
+      </p>
+    </div>
+  </div>
+          
+      </div>
+    </section>
+
+
+    <!-- for ProPuct Teams-->
+
+    <section class="Product">
+      <div class="col-2">
+        <img src="img/Group 21.png" class="product-img">
+      </div>
+
+      <div class="col-1">
+        <div class="txt-Pr-ra">
+          <div class="txt-Pr">
+            <svg class="elec" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.50001 7.598V5.828C9.16722 5.5921 9.72956 5.12793 10.0876 4.51752C10.4457 3.90711 10.5765 3.18976 10.4568 2.49227C10.3371 1.79477 9.97473 1.16204 9.43367 0.705895C8.8926 0.249753 8.20769 -0.000427246 7.50001 -0.000427246C6.79232 -0.000427246 6.10741 0.249753 5.56635 0.705895C5.02528 1.16204 4.66288 1.79477 4.54321 2.49227C4.42354 3.18976 4.5543 3.90711 4.91237 4.51752C5.27045 5.12793 5.83279 5.5921 6.50001 5.828V8.012C6.50006 8.27719 6.60546 8.53151 6.79301 8.719L9.50001 11.426V23.012C9.50001 23.2772 9.60536 23.5316 9.7929 23.7191C9.98044 23.9066 10.2348 24.012 10.5 24.012C10.7652 24.012 11.0196 23.9066 11.2071 23.7191C11.3946 23.5316 11.5 23.2772 11.5 23.012V11.012C11.4999 10.7468 11.3946 10.4925 11.207 10.305L8.50001 7.598Z" fill="#722ED1"/>
+              <path d="M4.50001 16.598V14.828C5.16722 14.5921 5.72956 14.1279 6.08764 13.5175C6.44571 12.9071 6.57647 12.1898 6.4568 11.4923C6.33713 10.7948 5.97474 10.162 5.43367 9.70589C4.8926 9.24975 4.20769 8.99957 3.50001 8.99957C2.79232 8.99957 2.10741 9.24975 1.56635 9.70589C1.02528 10.162 0.662882 10.7948 0.543211 11.4923C0.423539 12.1898 0.554298 12.9071 0.912375 13.5175C1.27045 14.1279 1.83279 14.5921 2.50001 14.828V17.012C2.50006 17.2772 2.60546 17.5315 2.79301 17.719L5.50001 20.426V23.012C5.50001 23.2772 5.60536 23.5316 5.7929 23.7191C5.98044 23.9066 6.23479 24.012 6.50001 24.012C6.76522 24.012 7.01958 23.9066 7.20711 23.7191C7.39465 23.5316 7.50001 23.2772 7.50001 23.012V20.012C7.49995 19.7468 7.39456 19.4925 7.20701 19.305L4.50001 16.598Z" fill="#722ED1"/>
+              <path d="M18.5 8.012V5.828C19.1672 5.5921 19.7296 5.12793 20.0876 4.51752C20.4457 3.90711 20.5765 3.18976 20.4568 2.49227C20.3371 1.79477 19.9747 1.16204 19.4337 0.705895C18.8926 0.249753 18.2077 -0.000427246 17.5 -0.000427246C16.7923 -0.000427246 16.1074 0.249753 15.5663 0.705895C15.0253 1.16204 14.6629 1.79477 14.5432 2.49227C14.4235 3.18976 14.5543 3.90711 14.9124 4.51752C15.2704 5.12793 15.8328 5.5921 16.5 5.828V7.598L13.793 10.305C13.6055 10.4925 13.5001 10.7468 13.5 11.012V23.012C13.5 23.2772 13.6054 23.5316 13.7929 23.7191C13.9804 23.9066 14.2348 24.012 14.5 24.012C14.7652 24.012 15.0196 23.9066 15.2071 23.7191C15.3946 23.5316 15.5 23.2772 15.5 23.012V11.426L18.207 8.719C18.3946 8.53151 18.4999 8.27719 18.5 8.012Z" fill="#722ED1"/>
+              <path d="M24.5 12.012C24.5023 11.4615 24.353 10.9209 24.0686 10.4496C23.7842 9.97824 23.3755 9.59424 22.8874 9.33965C22.3993 9.08506 21.8505 8.96968 21.3012 9.00617C20.7519 9.04265 20.2232 9.22959 19.7731 9.5465C19.3229 9.86341 18.9686 10.2981 18.749 10.8029C18.5294 11.3077 18.453 11.8633 18.528 12.4086C18.6031 12.954 18.8268 13.4682 19.1746 13.895C19.5224 14.3217 19.981 14.6445 20.5 14.828V16.598L17.793 19.305C17.6054 19.4925 17.5001 19.7468 17.5 20.012V23.012C17.5 23.2772 17.6054 23.5316 17.7929 23.7191C17.9804 23.9066 18.2348 24.012 18.5 24.012C18.7652 24.012 19.0196 23.9066 19.2071 23.7191C19.3946 23.5316 19.5 23.2772 19.5 23.012V20.426L22.207 17.719C22.3946 17.5315 22.4999 17.2772 22.5 17.012V14.828C23.0829 14.6219 23.5879 14.2408 23.9459 13.7367C24.3039 13.2326 24.4974 12.6303 24.5 12.012Z" fill="#722ED1"/>
+              </svg>
+              
+            <h6 class="Pr"> For Product Teams</h6> <br>
+          </div>
+        </div>
+            <div class="Pr-content">
+              <div> 
+                <h2> Launch with the best stack</h2> <br>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur repudiandae sed temporibus tempore. Eaque fugit molestiae possimus deserunt similique magnam perferendis dolor repellat dolore sunt.
+                </p> <br>
+              </div>
+          </div>
+      </div>
+      
+        
+      </div>
+    </section>
+
+    <!-- for Engineering Teams -->
+    <section class="Engineering">
+      <div class="col-2">
+        <div class="txt-eng-ra">
+          <div class="text-Eng">
+            <svg class="engi" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.387 2.4V0H10.842V2.4C9.90207 2.59181 9.06683 3.12581 8.49824 3.89845C7.92965 4.6711 7.6682 5.62734 7.7646 6.5818C7.86099 7.53626 8.30835 8.42092 9.01995 9.06427C9.73155 9.70762 10.6567 10.0638 11.616 10.0638C12.5753 10.0638 13.5005 9.70762 14.2121 9.06427C14.9237 8.42092 15.371 7.53626 15.4674 6.5818C15.5638 5.62734 15.3024 4.6711 14.7338 3.89845C14.1652 3.12581 13.3299 2.59181 12.39 2.4H12.387Z" fill="#722ED1"/>
+              <path d="M19.8 17.032H21.681V15.484H19.021L15.974 9.397C15.3365 10.2632 14.4564 10.921 13.445 11.287L15.545 15.487H12.387V13.935H10.839V15.483H7.682L9.782 11.283C8.77053 10.9172 7.89037 10.2594 7.253 9.393L4.2 15.484H1.548V17.032H3.429L0 23.881C0.878326 24.1006 1.80527 24.014 2.62777 23.6357C3.45028 23.2573 4.11917 22.6098 4.524 21.8L6.908 17.033H10.839V18.581H12.387V17.032H16.318L18.7 21.8C19.1048 22.6098 19.7737 23.2573 20.5962 23.6357C21.4187 24.014 22.3457 24.1006 23.224 23.881L19.8 17.032Z" fill="#722ED1"/>
+              </svg>
+              
+            <h6 class="Eng"> For Engineering Teams</h6> <br>
+          </div>
+        </div>
+            <div class="Pr-content">
+              <div> 
+                <h2> Data-driven pipelines in minutes</h2> <br>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Porro sapiente error accusamus quam
+                  doloremque delectus commodi
+                   nostrum obcaecati voluptatibus, eius optio fugiat dolorum soluta recusandae.</p><br>
+              </div>
+          </div>
+      </div>
+      
+        <div class="col-1">
+          <img src="img/image 6.png" class="eng-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- for Tesimonial -->
+    <section class="Guillaume">
+      
+      <h4 class="Gui">
+        "What I love about Qubly is the easy way we can collaborate even if there is alot <br> 
+        of people involved in the process"
+      </h4>
+      <br>
+
+      <div class="man">
+      <img src="img/Profile.png" class="img-man">
+      <h4 class="CTO"> <b>  Guillaum Cabne <br> CTO @ BigSpring </b> </h4>
+      <hr class="h">
+      
+      <img src="img/Client logo.png" class="client-logo">
+      </div>
+      
+      </section>
+
+
+      <!-- for signup form-->
+
+      <section class="Sign-Up">
+        <div class="best">
+          <div class="txt-best">
+            <h3>
+              See Why the world's best companies use Qubly to 
+             become truly data-driven.
+            </h3>
+          </div>
+
+          <div class="Trasted-by">
+             <div class="txt-line">
+              <span >Trasted by</span>
+             </div>
+            
+
+          </div>
+            
+          <div>
+              <img src="img/Client logos.png" class="client">
+          </div>
+
+        </div>
+        
+        <div class="signup-form">
+          <h3> Sign Up </h3> 
+          <button class="signup-btn"> Start your free trial</button>
+          <form>
+            <input type="email" class="input-box"  placeholder="Your primary email">
+            <input type="password" class="input-box" maxlength="8" minlength="4" required placeholder="Password">
+            <input type="password" class="input-box" maxlength="8" minlength="4" required placeholder="Re-type Password">
+
+            <div class="separator">
+              <hr class="line">
+              <span class="or">OR </span>
+              <hr class="line">
+            </div>
+
+            <div class="google">
+              <img src="img/google.JPG">
+              <button class="Google-btn"> Sign in with Google </button> 
+            </div>
+          
+            <p>Already have an account? <a class="login">Login</a></p>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- footer-->
+
+      <section class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <div class="logo-footer">
+                <img src="img/Logo.png" >
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Suscipit dolorum deleniti deserunt! Voluptatem, 
+              </p>
+              </div>
+              
+
+              <div class="icons">
+                <a href="#"class="fac"> <i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"class="fac"> <i class="fa-brands fa-twitter"></i></a>
+                <a href="#"class="fac"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+              
+              </div>
+
+            <div class="footer-col">
+              <h4>Product</h4>
+              <ul>
+                <li><a href="#">  Connection</a></li>
+                <li><a href="#">Protocols</a></li>
+                <li><a href="#">Personas</a></li>
+                <li><a href="#">Integration</a></li>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">GDPR</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>For Developers</h4>
+              <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Open Source</a></li>
+                <li><a href="#">Engineering Team</a></li>
+               
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="#">Help Cevnter </a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Bulletins</a></li>
+                <li><a href="#">Documintation</a></li>
+                <li><a href="#">Partener</a></li>
+                <li><a href="#">Portal</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4> Newsleter</h4>
+              <form>
+                <input type="email" class="input-box" placeholder="Email">
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="copy-wirte">
+          <h5>
+            Rahul Rao &copy;
+          </h5>
+        </div>
+     </footer>
+    
+
+</body>
+</html>
